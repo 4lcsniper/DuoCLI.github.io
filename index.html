@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" href="static/images/duo-fotor-bg-remover-20260331222431.png">
+
+<title>DuoCLI</title>
+
+<style>
+
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* ---------- BODY (WALLPAPER FIXED) ---------- */
+body {
+    background: url("static/images/depositphotos_632792736-stock-photo-colorful-blend-pink-purple-blue.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    text-align: center;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ---------- TITLE ---------- */
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ---------- SUBTITLE ---------- */
+.subtitle {
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Base button */
+.btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* About (purple) */
+.about {
+    background: #af52de;
+    color: white;
+    box-shadow: 0 0 15px rgba(175,82,222,0.6);
+}
+
+.about:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(175,82,222,0.9);
+}
+
+/* Download (blue) */
+.download {
+    background: #007aff;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,122,255,0.6);
+}
+
+.download:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0,122,255,0.9);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    margin-top: 20px;
+    color: black;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGO -->
+    <img src="static/images/duo-fotor-bg-remover-20260331222431.png" class="logo">
+
+    <!-- TITLE -->
+    <div class="title">DuoCLI</div>
+
+    <!-- SUBTEXT -->
+    <div class="subtitle">
+        The next-generation cheat tools for Duolingo. Available for all.
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+
+        <button class="btn about" id="aboutBtn">
+            About Us
+        </button>
+
+        <button class="btn download" id="downloadBtn">
+            Download
+        </button>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Copyright (c) 2026 DuoCLI Inc.
+    </div>
+
+</div>
+
+<script>
+
+/* ---------- PAGE FADE IN ---------- */
+window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
+    document.body.style.transform = "translateY(0)";
+});
+
+/* ---------- BUTTON LINKS ---------- */
+document.getElementById("downloadBtn").onclick = () => {
+    window.open("https://greasyfork.org/en/scripts/473310-duolingo-pro", "_self");
+};
+
+document.getElementById("aboutBtn").onclick = () => {
+    window.open("https://guns.lol/4lc_sniper", "_self");
+};
+
+/* ---------- CLICK ANIMATION ---------- */
+document.querySelectorAll(".btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            btn.style.transform = "scale(1)";
+        }, 150);
+    });
+});
+
+</script>
+
+</body>
+</html>
